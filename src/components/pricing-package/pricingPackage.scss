@@ -1,0 +1,90 @@
+.package {
+  box-shadow: 0 0 5px #aaa;
+  border-radius: 5px;
+  border: none;
+  margin: 100px auto;
+  text-align: center;
+  padding: 30px 0;
+  background-color: white;
+  min-width: 236px;
+
+  .head {
+    color: #0188bc;
+    font-size: 1.6rem;
+    margin: 10px 0;
+  }
+
+  .details {
+    margin: 10px 0;
+    max-height: 176px;
+    min-height: 176px;
+    overflow-y: scroll;
+
+    // Width
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(204, 204, 204);
+      border: none;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 10px;
+      border: none;
+      transition: all .25s ease;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ee9e0a;
+    }
+
+    ul {
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+
+        .icon {
+          width: 25px;
+          height: auto;
+          margin-right: 5px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .price {
+    margin: 10px 0 25px 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+
+  a {
+    background-color: #0188bc;
+    padding: 10px 20px;
+    transition: var(--advance);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.02);
+      background-color: #0168bc;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    margin: 10px auto;
+  }
+}

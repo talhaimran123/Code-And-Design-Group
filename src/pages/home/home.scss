@@ -1,0 +1,141 @@
+.home {
+    section {
+        margin: 50px auto 0 auto;
+
+        .text {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+
+            h3 {
+                font-size: 2rem;
+                color: var(--primary-color);
+                font-family: 'Pacifico', cursive;
+            }
+
+            h2 {
+                color: var(--secondary-text);
+            }
+
+            p {
+                color: var(--link-color);
+                margin: 8px auto 0 auto;
+                max-width: 70%;
+            }
+        }
+    }
+
+    .service-list {
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .portfolio {
+        background: url(../../assets/images/main-img.png) no-repeat top center;
+        background-size: cover;
+        padding: 100px 0;
+    }
+
+    .vision {
+        background: url(../../assets/images/main-img-dark.png) no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5% 10%;
+        margin-top: 0;
+
+        .left {
+            flex: 1;
+
+            h2 {
+                color: #999B9F;
+            }
+
+            p {
+                color: #999B9F;
+                margin: 20px 0;
+            }
+
+            button {
+                border: none;
+                font-size: 16px;
+                color: #FFF;
+                padding: 8px 16px;
+                background-color: var(--primary-color);
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #f28926;
+                }
+            }
+
+        }
+
+        .right {
+            flex: 1;
+        }
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .home {
+        section {
+            .text {
+                width: 98%;
+
+                h3 {
+                    font-size: 1.6rem;
+                }
+
+                h2 {
+                    letter-spacing: 0.2px;
+                }
+
+                p {
+                    max-width: 85%;
+                }
+            }
+        }
+
+        .service-list {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+
+        .vision {
+            padding: 10%;
+            flex-direction: column-reverse;
+
+            .left {
+                h2 {
+                    color: #fff;
+                }
+
+                p {
+                    line-height: 23px;
+                    font-size: 1rem;
+                }
+
+            }
+        }
+
+        .video {
+            width: 90%;
+            height: auto;
+            margin: auto;
+            width: 90%;
+        }
+
+    }
+}

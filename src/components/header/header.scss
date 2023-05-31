@@ -1,0 +1,117 @@
+@mixin flex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+.header {
+  @include flex($jc: space-between, $ai: flex-start);
+  padding: 12px 16px 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  a {
+    z-index: 1;
+
+    img {
+      width: 130px;
+      height: auto;
+      transition: var(--basic);
+    }
+
+    .invert {
+      filter: brightness(0) invert(1);
+    }
+
+    @media(max-width: 600px){
+      img{
+        width: 105px;
+      }
+    }
+  }
+
+  .icon-box {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    @include flex;
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 10px;
+
+    .icon {
+      width: 30px;
+      height: auto;
+      color: white;
+      transition: var(--advance);
+
+      &:hover {
+        transform: rotate(180deg) scale(1.15);
+      }
+    }
+  }
+
+  .dropdown {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    @include flex($jc: space-between);
+    background-color: var(--primary-color);
+    animation: fromTop 0.35s;
+
+    .left-sec {
+      a {
+        color: white;
+        font-weight: bold;
+        display: block;
+        font-size: 2rem;
+        margin: 10px 0 0 30px;
+        transition: var(--advance);
+
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+    .right-sec {
+      position: relative;
+
+      .icon {
+        color: var(--primar-black);
+        width: 25px;
+        height: auto;
+        position: absolute;
+      }
+
+      .one {
+        top: -10px;
+        left: -32px;
+      }
+
+      .two {
+        bottom: -5px;
+        left: 518px;
+      }
+
+      p {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        max-width: 600px;
+        font-weight: 400;
+      }
+    }
+    @media (max-width: 560px) {
+      .right-sec {
+        display: none;
+      }
+    }
+  }
+
+}

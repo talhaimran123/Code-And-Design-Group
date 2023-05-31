@@ -1,0 +1,217 @@
+.service-detail-section {
+    margin-top: 50px;
+
+    .head {
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-weight: 300;
+            font-size: 2.1rem;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        p {
+            color: var(--secondary-text);
+            margin: 8px auto 0 auto;
+            max-width: 75%;
+            line-height: 23px;
+            font-size: 1.3rem;
+            text-align: center;
+            padding-top: 5px;
+        }
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin: 80px auto 0 auto;
+        position: relative;
+
+        .image {
+            flex: 1;
+            padding: 15px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: space-between;
+
+            h2 {
+                color: var(--primary-color);
+                text-align: left;
+                font-weight: 300;
+                font-size: 1.7rem;
+                line-height: 32px;
+            }
+
+            p {
+                color: var(--secondary-text);
+                margin: 15px 0;
+                line-height: 26px;
+                font-size: 1.3rem;
+                text-align: left;
+                font-weight: 300;
+            }
+
+            a {
+                border: none;
+                font-size: 1.1rem;
+                color: #FFF;
+                padding: 12px 20px;
+                background-color: Black;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: var(--advance);
+                width: 140px;
+
+                &:hover {
+                    background: #f28926;
+                }
+            }
+        }
+    }
+
+    .packages-section {
+        margin: 200px auto;
+        @media (max-width: 650px) {
+            margin: 80px auto;
+        }
+    }
+
+    .info {
+        background: url(../../assets/images/main-img-dark.png) top center no-repeat;
+        background-size: cover;
+        padding: 70px;
+
+        p {
+            color: #999B9F;
+            margin: auto;
+            max-width: 90%;
+            line-height: 32px;
+            font-size: 1.3rem;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            // flex-wrap: wrap;
+            max-width: 90%;
+            margin: 0 auto 50px auto;
+
+            div {
+                border-right: 2px solid #cccccc33;
+                flex: 1;
+                text-align: center;
+
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+
+                h5 {
+                    color: white;
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                    padding-top: 20px;
+                }
+            }
+
+            div:nth-of-type(4) {
+                border: none;
+            }
+
+            @media(max-width:650px) {
+                flex-wrap: wrap;
+                div {  
+                    min-width: 50%;  
+                    img {
+                        width: 130px;
+                    }
+    
+                    h5 {
+                        font-size: 1rem;
+                    }
+                }
+                div:nth-of-type(2) {
+                    border: none;
+                }
+            }
+            @media(max-width:520px) {
+                div {  
+                    padding-top: 5px;
+                    img {
+                        width: 90px;
+                    }
+    
+                    h5 {
+                        font-size: 0.8rem;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .service-detail-section {
+        .head {
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                max-width: 90%;
+                line-height: 26px;
+                font-size: 1.1rem;
+                padding-top: 0px;
+            }
+        }
+
+        .service {
+            flex-direction: column;
+            width: 98%;
+
+            .content {
+                position: relative;
+
+                h2 {
+                    font-size: 2rem;
+                    top: 0;
+                    line-height: 34px;
+                }
+
+                p {
+                    line-height: 37px;
+                    font-size: 1.4rem;
+                }
+
+                a {
+                    bottom: -20px;
+                }
+            }
+        }
+
+        .info {
+            padding: 70px 0px;
+        }
+    }
+}

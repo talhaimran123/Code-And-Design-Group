@@ -1,0 +1,114 @@
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+    width: 90%;
+    box-shadow: 0 0 5px #aaa;
+    margin: 5px 0;
+    min-height: 460px;
+
+    .image-content {
+        position: relative;
+        row-gap: 5px;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // .overlay {
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: var(--primary-color);
+        //     border-radius: 25px 25px 0 25px;
+
+        //     border-left: 1px solid red;
+        //     border-bottom: 1px solid red;
+        // }
+
+        // .overlay::before,
+        // .overlay::after {
+        //     content: '';
+        //     position: absolute;
+        //     right: 0;
+        //     bottom: -41px;
+        //     height: 40px;
+        //     width: 40px;
+        //     background-color: var(--primary-color);
+        //     z-index: 9999;
+        // }
+
+        // .overlay::after {
+        //     border-radius: 0 25px 0 0;
+        //     background-color: #FFF;
+
+        //     border-top: 1px solid red ;
+        //     border-right: 1px solid red ;
+        // }
+
+        .card-image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background: #FFF;
+            padding: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image .icon {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            // border-radius: 50%;
+        }
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin: 3px 0 7px 0;
+        }
+
+        .description {
+            color: var(--secondary-text);
+            text-align: center;
+        }
+
+        .button {
+            border: none;
+            font-size: 16px;
+            color: #FFF;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            border-radius: 6px;
+            margin: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #f28926;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

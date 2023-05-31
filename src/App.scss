@@ -1,0 +1,120 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*  css variables */
+:root {
+  --primary-color: #FFA826;
+  --secondary-color: #fff;
+  --primary-text: #000;
+  --secondary-text: #707070;
+  --link-color: #999B9F;
+
+  --heading-fontSize: 2rem;
+
+  --basic: all .55s ease-in-out;
+  --advance: all .25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+::placeholder {
+  color: var(--secondary-text);
+}
+
+/* reset browser default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: var(--secondary-text);
+  font-size: 1rem;
+}
+
+h1,
+h2 {
+  font-size: var(--heading-fontSize);
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 0.9rem;
+  }
+  
+  h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  width: 100%;
+}
+
+// CUSTOM
+.active {
+  color: var(--primary-text) !important;
+}
+
+@keyframes fromTop {
+  0% {
+    top: -1000%
+  }
+
+  100% {
+    top: 0
+  }
+}
+
+.rec-dot_active {
+  background-color: var(--primary-color) !important;
+}
+
+.rec.rec-dot {
+  background-color: var(--link-color);
+  box-shadow: none;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+
+  &:focus {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 1px 3px var(--primary-color);
+
+  }
+
+  &:hover {
+    box-shadow: 0 0 1px 3px var(--primary-color);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  &:active {
+    box-shadow: 0 0 1px 3px var(--primary-color);
+  }
+
+}
